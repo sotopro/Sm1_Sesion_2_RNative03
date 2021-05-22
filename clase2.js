@@ -4,7 +4,7 @@ const person = {
     age: 28,
     hobbies: ['soccer', 'gaming'],
     isStudent: false
-};
+}; // object literal // keys: // values: 'string' number object arrays boolean function null undefiend 
 
 const objectConstuctor = new Object();
 
@@ -15,10 +15,10 @@ const gimli = {
     greet: function () {
         return `Hi, my name is ${this.name}!`;
     }
-}
+};
 
-let isEnable = true;
-let result = !isEnable ? 'weapon' : 'race';
+let isEnable = false;
+let result = isEnable ? 'weapon' : 'race';
 console.log('gimli weapon', gimli.weapon);
 console.log(gimli[result]);
 console.log('function', gimli.greet());
@@ -35,7 +35,9 @@ delete gimli.parents;
 
 // Iterate through properties of gimli
 for (let key in gimli) {
-    console.log(`${key}:`, gimli[key]);
+    console.log(`${key.toUpperCase()}:`, gimli[key]);
 }
-
+const gimliKeys = Object.keys(gimli);
 console.log('gimli', gimli);
+
+console.log('gimliKeys', gimliKeys);
