@@ -105,4 +105,53 @@ const entriesData = entries.forEach(entry => {
     let value = entry[1];
 
     console.log(`${key}: ${value}`)
-})
+});
+
+// Object assign
+const name = {
+    fistName: 'Daniel',
+    lastName: 'Soto'
+};
+
+const details = {
+    job: 'Programmer',
+    employer: 'Idat'
+};
+
+// merge the objects
+// const character = Object.assign(name, details)
+const character = {...name, ...details};
+
+console.log('character', character);
+
+// Object Freeze
+
+const user = {
+    username: 'AzureDiamond',
+    password: 'hunter2'
+};
+// Freeze the object
+
+const newUser = Object.freeze(user);
+
+
+console.log('newUser', newUser);
+
+
+// Object seal
+const user2 = {
+    username: 'AzureDiamond',
+    password: 'hunter2'
+};
+const newUser2 = Object.seal(user2);
+
+newUser2.password = '**********';
+newUser2.active = true;
+
+console.log('newUser2', newUser2);
+
+// Object PrototypeOF
+
+const people = ['Daniel', 'Jimmy', 'Roberto', 'Luis'];
+
+console.log('people', Object.getPrototypeOf(people));
