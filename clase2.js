@@ -41,3 +41,68 @@ const gimliKeys = Object.keys(gimli);
 console.log('gimli', gimli);
 
 console.log('gimliKeys', gimliKeys);
+
+const job = {
+    position: 'programmer',
+    type: 'hourly',
+    isAvailable: true,
+    showDetail() {
+        const accepting = this.isAvailable ? 'is accepting application' : 'is not currently accepting';
+        console.log(`The ${this.position} position is ${this.type} and ${accepting}.`);
+    }
+}
+
+// use Object.create to pass properties
+
+const barista = Object.create(job);
+
+barista.position = "barista";
+console.log('barista details', barista.showDetail());
+
+const employees = {
+    boos: 'Michel',
+    secretary: 'Pam',
+    sales: 'Jim',
+    accountant: 'Pedro'
+};
+
+console.log('Object.keys(employees)', Object.keys(employees))
+// iterate object keys
+const keys = Object.keys(employees).forEach(employee => {
+    let value = employees[employee];
+    console.log(`${employee}: ${value}`);
+})
+
+console.log('employees:', keys);
+
+// initialize an object
+
+const session = {
+    id: 1,
+    time: `26-July-2021`,
+    device: 'Mobile',
+    browser: 'Chrome'
+};
+
+const values = Object.values(session);
+
+console.log('values session:', values);
+
+// Object entries
+
+const operatingSystem = {
+    name: 'Ubuntu',
+    version: 18.04,
+    license: 'Open Source',
+};
+
+const entries = Object.entries(operatingSystem);
+
+console.log('entries operatingSystem', entries);
+
+const entriesData = entries.forEach(entry => {
+    let key = entry[0];
+    let value = entry[1];
+
+    console.log(`${key}: ${value}`)
+})
