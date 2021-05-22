@@ -57,7 +57,7 @@ const job = {
 const barista = Object.create(job);
 
 barista.position = "barista";
-console.log('barista details', barista.showDetail());
+console.log('barista details', barista.position);
 
 const employees = {
     boos: 'Michel',
