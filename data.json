@@ -1,0 +1,25 @@
+{
+    "fistname": "Daniel",
+    "lastname": "Soto",
+    "location": "Lima",
+    "online": true,
+    "students": 12,
+    "services": [
+        {
+            "id": 1,
+            "description": "Web Application"
+        },
+        {
+            "id": 2,
+            "description": "Mobile Application"
+        },
+        {
+            "id": 3,
+            "description": "Course"
+        },
+        {
+            "id": 4,
+            "description": "Coffee"
+        }
+    ]
+}

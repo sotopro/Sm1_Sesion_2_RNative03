@@ -155,3 +155,28 @@ console.log('newUser2', newUser2);
 const people = ['Daniel', 'Jimmy', 'Roberto', 'Luis'];
 
 console.log('people', Object.getPrototypeOf(people));
+
+
+const computer = {
+    company: 'ASUS',
+    type: 'Laptop',
+    release: 2021,
+    hasMonitor: true,
+    hasKeyboard: true,
+    colors: [
+        {
+            type: 'light',
+            color: 'blue',
+        },
+        {
+            type: 'dark',
+            color: 'blue',
+        }
+    ],
+    memory: '4GB',
+    proccesor: 'Intel i7 10700-H'
+}
+
+const { company, type, release, hasMonitor, hasKeyboard, colors,memory, proccesor} = computer;
+
+console.log('company', memory)
